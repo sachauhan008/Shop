@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+.btn {
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
+}
