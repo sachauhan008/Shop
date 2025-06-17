@@ -63,20 +63,28 @@ const ProductList = ({ setAuth }) => {
 
   return (
     <div className="container mt-4">
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h2 className="fw-bold">🍎 Fruit & Vegetable Market</h2>
-        <Link
-          to="/add"
-          className="btn btn-success px-4 py-2 rounded-pill shadow-sm"
-        >
-          + Add Product
-        </Link>
-        <button
-          className="btn btn-outline-danger px-4 py-2 rounded-pill shadow-sm"
-          onClick={handleLogout}
-        >
-          Logout
-        </button>
+       <div className="row align-items-center mb-4 g-2 text-center text-md-start">
+        <div className="col-12 col-md-6">
+          <h2 className="fw-bold">🍎 Fruit & Vegetable Market</h2>
+        </div>
+
+        <div className="col-6 col-md-3 text-end">
+          <Link
+            to="/add"
+            className="btn btn-success w-100 w-md-auto px-4 py-2 rounded-pill shadow-sm"
+          >
+            + Add Product
+          </Link>
+        </div>
+
+        <div className="col-6 col-md-3 text-end">
+          <button
+            className="btn btn-outline-danger w-100 w-md-auto px-4 py-2 rounded-pill shadow-sm"
+            onClick={handleLogout}
+          >
+            Logout
+          </button>
+        </div>
       </div>
 
       <div className="row mb-4">
