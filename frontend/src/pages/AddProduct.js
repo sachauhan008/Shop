@@ -39,7 +39,7 @@ const AddProduct = () => {
     e.preventDefault();
     if (product) {
       await axios.put(
-        `http://localhost:5000/api/products/${product._id}`,
+        `${process.env.REACT_APP_API_URL}/products/${product._id}`,
         form,
         {
           headers: {
@@ -49,7 +49,7 @@ const AddProduct = () => {
       );
       toast.success("Update item successful", { position: "top-center" });
     } else {
-      await axios.post("http://localhost:5000/api/products", form, {
+      await axios.post(`${process.env.REACT_APP_API_URL}/products`, form, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

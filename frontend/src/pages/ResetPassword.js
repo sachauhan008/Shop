@@ -12,7 +12,7 @@ const ResetPassword = () => {
 
   const handleReset = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/reset-password", {
+      await axios.post(`${process.env.REACT_APP_API_URL}/auth/reset-password`, {
         email: state.email,
         otp,
         newPassword,

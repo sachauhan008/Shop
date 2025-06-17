@@ -10,7 +10,7 @@ const ForgotPassword = () => {
 
   const handleSendOTP = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/forgot-password", { email });
+      await axios.post(`${process.env.REACT_APP_API_URL}/auth/forgot-password`, { email });
       toast.success("OTP sent to your email");
       navigate("/reset-password", { state: { email } });
     } catch {

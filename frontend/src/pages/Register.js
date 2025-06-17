@@ -15,7 +15,7 @@ const Register = () => {
 
   const sendOtp = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/send-otp", formData);
+      await axios.post(`${process.env.REACT_APP_API_URL}/auth/send-otp`, formData);
       toast.success("OTP sent to your email", { position: "top-center" });
       setStep(2);
     } catch (err) {
@@ -25,7 +25,7 @@ const Register = () => {
 
   const verifyOtp = async () => {
     try {
-      await axios.post("http://localhost:5000/api/auth/verify-otp", {
+      await axios.post(`${process.env.REACT_APP_API_URL}/auth/verify-otp`, {
         email: formData.email,
         otp,
       });
